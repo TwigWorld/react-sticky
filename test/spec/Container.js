@@ -71,7 +71,7 @@ describe("StickyContainer", () => {
       it(`should be notified on window ${eventName} event`, done => {
         expect(containerNode.subscribers).to.be.empty;
         subscribe(() => done());
-        window.dispatchEvent(new Event(eventName));
+        window.dispatchEvent(new window.Event(eventName));
       });
     });
   });
